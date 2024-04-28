@@ -1,0 +1,117 @@
+{
+    "manifestVersion": 1.0,
+    "id": "field-text-control",
+    "version": "2.2.29",
+    "name": "Field text control",
+    "description": "A work item form control which field text.",
+    "publisher": "ms-devlabs",
+    "icons": {
+        "default": "img/logo.png"
+    },
+    "categories": [
+        "Azure Boards"
+    ],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "files": [
+        {
+            "path": "dist",
+            "addressable": true
+        },
+        {
+            "path": "img",
+            "addressable": true
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/yangruiaddress/FieldTextControl"
+    },
+    "links": {
+        "home": {
+            "uri": "https://github.com/yangruiaddress/FieldTextControl"
+        },
+        "learn": {
+            "uri": "https://github.com/yangruiaddress/FieldTextControl"
+        },
+        "repository": {
+            "uri": "https://github.com/yangruiaddress/FieldTextControl"
+        },
+        "issues": {
+            "uri": "https://github.com/yangruiaddress/FieldTextControl/issues"
+        },
+        "support": {
+            "uri": "https://github.com/yangruiaddress/FieldTextControl/issues"
+        }
+    },
+    "tags": [
+        "Work Items",
+        "Extensions",
+        "Work Item Control",
+        "Sample",
+        "Field text Control"
+    ],
+    "content": {
+        "details": {
+            "path": "readme.md"
+        }
+    },
+    "scopes": [
+        "vso.work"
+    ],
+    "contributions": [
+		{
+            "id": "field-form-control",
+            "type": "ms.vss-work-web.work-item-form-control",
+            "description": "A work item form control which field text.",
+            "targets": [
+                "ms.vss-work-web.work-item-form"
+            ],
+            "properties": {
+                "name": "Field text control",
+                "uri": "dist/fieldtext.html",
+                "height": 50,
+				"inputs": [
+				    {
+                        "id":"FieldName",
+                        "name": "FieldName",
+                        "description": "The field name displayed by the control",
+                        "type": "WorkItemField",
+                        "properties": {
+                            "workItemFieldTypes": ["String", "HTML"]
+                        },
+                        "validation": {
+                            "dataType": "String",
+                            "isRequired": true
+                        }
+                    },
+                    {
+                        "id":"FieldValue",
+                        "name": "Field Value",
+                        "type": "WorkItemField",
+                        "description": "The field name of the workitem used for concatenation",
+                        "properties": {
+                            "workItemFieldTypes": ["String", "HTML"]
+                        },
+                        "validation": {
+                            "dataType": "String",
+                            "isRequired": false
+                        }
+                    },
+                    {
+                        "id":"TextValue",
+                        "name": "Text Value",
+                        "description": "Used to concatenate custom text",
+                        "validation": {
+                            "dataType": "String",
+                            "isRequired": false
+                        }
+                    }
+				]
+            }
+        }
+    ]
+}
